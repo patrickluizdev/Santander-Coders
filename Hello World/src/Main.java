@@ -17,7 +17,9 @@ public class Main {
         ////////////////////////////////////////////////////////////////////////
         System.out.println("////////////////////////////////////////////////////////////////////////");
         ////////////////////////////////////////////////////////////////////////
-        System.out.println("Exemplos a=3 & b=2");
+        System.out.println("Atalho Util: sout");
+        System.out.println("////////////////////////////////////////////////////////////////////////");
+
 
         int a;
         int b;
@@ -34,14 +36,41 @@ public class Main {
         System.out.println("Subtração: " +subtracao);
         System.out.println("Multiplicação: "+multiplicacao);
         System.out.println("Divisão: "+divisao);
+
+        System.out.println(" ");
+        System.out.println("Variaveis boolean ");
+
+         //boolean resultado = false;
+        //System.out.println(resultado);
+
+        boolean fimDeSemana = true;
+        boolean fazendoSol = true;
+
+        boolean vamosAPraia = fimDeSemana && fazendoSol;
+
+        String mensagem = "Vamos a praia ? " + (fimDeSemana ? "Sim, Hoje é Fim de Semana" : "Não, Hoje não é fim de semana") ;
+
+
+
+
+        System.out.println(mensagem);
+
         System.out.println("////////////////////////////////////////////////////////////////////////");
 
+        System.out.println("Tabela Verdade");
+        System.out.println("Operador && ( AND ) -" +
+                " true && true = true ," +
+                " true && false = false ," +
+                " false && true = false ," +
+                " false && false = false");
 
+        System.out.println("Operador || ( OR ) - " +
+                " true || true = true ," +
+                " true || false = true ," +
+                " false || true = true ," +
+                " false || false = false");
 
-
-
-
-
+        System.out.println("////////////////////////////////////////////////////////////////////////");
 
 
         //
