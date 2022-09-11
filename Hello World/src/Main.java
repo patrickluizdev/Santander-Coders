@@ -71,8 +71,47 @@ public class Main {
                 " false || false = false");
 
         System.out.println("////////////////////////////////////////////////////////////////////////");
+        System.out.println("Condicionais");
+        System.out.println(" ");
+
+        int nota = 80;
+        String graduacao = "";
+
+        System.out.println("Nota do Aluno: " + nota);
+        // A 80, B 70 C 60 D 0
+
+        if(nota>=80 && nota >70){
+            graduacao = "A";
+            }else if (nota>=70 && nota > 60){
+            graduacao = "B";
+            }else if (nota >= 60 && nota > 50) {
+            graduacao = "C";
+            }else if (nota == 50) {
+            graduacao = "D";
+            }else if(nota < 50 && nota >= 0){
+            graduacao = "Aluno Reprovado";
+        }else{
+            System.out.println("Nota Inválida");
+        }
+
+        switch (graduacao){
+            case "A":
+                System.out.println("Aprovado, o Aluno atingiu Graduação A");
+                break;
+            case "B":
+                System.out.println("Aprovado, o Aluno atingiu Graduação B");
+                break;
+            case "C":
+                System.out.println("Aprovado, o Aluno atingiu Graduação C");
+                break;
+            case "D":
+                System.out.println("Aprovado, o Aluno atingiu Graduação D");
+                break;
+            default:
+            System.out.println("");
+        }
 
 
-        //
+        //            System.out.println("Aprovado, o Aluno atingiu Graduação D");
     }
 }
