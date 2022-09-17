@@ -1,3 +1,10 @@
+import java.rmi.registry.LocateRegistry;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.TextStyle;
+import java.util.Locale;
+
 public class Main {
     public static void main(String[] args) {
         //
@@ -110,6 +117,41 @@ public class Main {
             default:
             System.out.println("");
         }
+
+        System.out.println("////////////////////////////////////////////////////////////////////////");
+        System.out.println("Manipulando Strings e Datas");
+
+        // Olá, {nome}, Hojé é {dia da semana}. {saudações}
+
+        String nomeMensagem = "Patrick";
+        //System.out.println(nomeMensagem.toLowerCase());
+        //System.out.println(nomeMensagem.toUpperCase());
+        //System.out.println(nomeMensagem.length());
+
+        String compara = "patrick";
+
+        //System.out.println(nomeMensagem.equalsIgnoreCase(compara));
+
+        LocalDate hoje = LocalDate.now();
+        Locale brasil = new Locale("pt", "BR");
+
+        String diaDaSemana = hoje.getDayOfWeek().getDisplayName(TextStyle.FULL, brasil);
+        String saudacao;
+
+        LocalDateTime agora = LocalDateTime.now();
+        if(agora.getHour() >= 0 && agora.getHour() <12){
+            saudacao = "bom dia";
+        }else if(agora.getHour() >= 12 && agora.getHour() <18 ){
+            saudacao = "boa tarde";
+        }else if (agora.getHour() >= 18 && agora.getHour() < 24 ){
+            saudacao = "boa noite";
+        }else {
+            saudacao = "Olá";
+        }
+
+        System.out.println("Olá, "+nomeMensagem+". Hoje é " +diaDaSemana.toUpperCase()+", "+saudacao);
+
+
 
     }
 }
